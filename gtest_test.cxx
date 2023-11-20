@@ -18,7 +18,7 @@ using namespace std::string_literals;
 
 // 1. Basics
 
-TEST(ExampleTest, ExpectVsAssert) {
+TEST(ExampleTest, BasicAssertions) {
     EXPECT_STRNE("hello", "world");
     EXPECT_EQ(7 * 6, 42);
 }
