@@ -13,7 +13,10 @@ namespace cfg {
 Parser::Parser(std::istream& is) : is_(is) {}
 
 bool Parser::operator()(db::ITransaction& transaction) {
-    transaction.Begin();
+    if (!transaction.Begin()) {
+        std::cerr << "failed to parse config: transaction begin error\n";
+        return false;
+    }
     try {
         json data = json::parse(is_);
         if (!transaction.Update("name", data["name"]) ||
