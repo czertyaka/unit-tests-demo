@@ -13,3 +13,11 @@ add_executable(main
 )
 target_link_libraries(main PRIVATE nlohmann_json::nlohmann_json)
 configure_file(config.json ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+
+add_executable(gtest_test gtest_test.cxx config.cxx)
+target_link_libraries(gtest_test GTest::gtest GTest::gtest_main nlohmann_json::nlohmann_json)
+add_test(NAME gtest_test COMMAND gtest_test)
+
+add_executable(boost_test boost_test.cxx)
+target_link_libraries(boost_test Boost::unit_test_framework)
+add_test(NAME boost_test COMMAND boost_test)
