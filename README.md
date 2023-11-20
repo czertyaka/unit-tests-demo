@@ -26,7 +26,7 @@
 [database.cxx](https://github.com/czertyaka/unit-tests-demo/blob/master/database.cxx).
 
 Тесты Boost реализованы в
-[boost_test.cxx](https://github.com/czertyaka/unit-tests-demo/blob/master/boost_text.cxx).
+[boost_test.cxx](https://github.com/czertyaka/unit-tests-demo/blob/master/boost_test.cxx).
 Фактически Boost используется только для примера добавления в проект теста, основанного на
 [Boost Test Library: The Unit Test Framework](https://www.boost.org/doc/libs/1_49_0/libs/test/doc/html/utf.html).
 
